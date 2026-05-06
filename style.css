@@ -128,8 +128,29 @@ body {
 .search-btn {
     width: 50px;
     height: 50px;
-    background: green;
+    background: palevioletred;
     border-radius: 50%;
+}
+
+.hero {
+    position: relative; 
+    overflow: hidden;   
+    padding-bottom: 40px; 
+}
+
+.wave-container {
+    position: absolute;
+    bottom: -1px; 
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 5;
+}
+
+.wave-container svg {
+    width: 100%;
+    height: 50px;  */
+    display: block;
 }
 
 .container {
@@ -138,13 +159,14 @@ body {
 }
 
 .destinations {
-    padding: 80px 0;
-    background: #fff;
+    padding-top: 60px;
+    background-color: #ffffff;
 }
 
 .destinations h2 {
     font-size: 28px;
     margin-bottom: 30px;
+    color: black;
 }
 
 /* grid */
