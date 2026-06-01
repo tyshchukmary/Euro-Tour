@@ -1,83 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Viatours</title>
-
-    <!-- ПІДКЛЮЧЕННЯ CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EuroTour — Подорожі Європою</title>
+    <!-- Підключення шрифту Google Fonts (Montserrat для сучасного європейського стилю) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
-    <div class="top-bar">
-        <div class="logo">Viatours</div>
-
-        <nav class="nav">
-            <a href="#" class="active">Home</a>
-            <a href="#">Tour</a>
-            <a href="#">Destination</a>
-            <a href="#">Activities</a>
-            <a href="#">Pages</a>
-            <a href="#">Contact</a>
-        </nav>
-
-        <div class="actions">
-            <span>USD</span>
-            <a href="#" class="signup">Sign up</a>
-            <button class="login">Log in</button>
+    <!-- 1. HEADER (ШАПКА САЙТУ) -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#">Euro<span>Tour</span></a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Головна</a></li>
+                    <li><a href="#destinations">Напрямки</a></li>
+                    <li><a href="#tours">Міські тури</a></li>
+                    <li><a href="#about">Чому ми</a></li>
+                    <li><a href="#articles">Статті</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#tours" class="btn btn-secondary">Обрати тур</a>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <div class="search-box">
-    <div class="search-item">
-        <span class="circle"></span>
-        <div>
-            <p class="label">Where</p>
-            <p class="value">Search destinations</p>
+    <main>
+        <!-- 2. HERO SECTION (ПЕРШИЙ ЕКРАН) -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Відкривай дивовижну Європу разом з нами</h1>
+                    <p>Неймовірні міські тури, затишні куточки та незабутні емоції. Обери свою ідеальну подорож вже сьогодні.</p>
+                    <a href="#destinations" class="btn btn-primary">Дослідити напрямки</a>
+                </div>
+                <div class="hero-image">
+                    <!-- Використовуємо літак або гарне фото (можеш замінити на своє з папки img) -->
+                    <img src="img/plane.png" alt="Подорожі літаком по Європі" onerror="this.src='https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=600&q=80'">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. POPULAR DESTINATIONS -->
+        <section id="destinations" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Популярні напрямки</h2>
+                    <p>Найбільш затребувані локації серед європейських мандрівників</p>
+                </div>
+                <div class="grid grid-3">
+                    <!-- Картка 1: Париж -->
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=80" alt="Париж">
+                        </div>
+                        <div class="card-content">
+                            <h3>Париж, Франція</h3>
+                            <p>Романтика, архітектура та вишукана атмосфера.</p>
+                        </div>
+                    </div>
+                    <!-- Картка 2: Рим -->
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=500&q=80" alt="Рим">
+                        </div>
+                        <div class="card-content">
+                            <h3>Рим, Італія</h3>
+                            <p>Вічне місто з величною історією та смачною кухнею.</p>
+                        </div>
+                    </div>
+                    <!-- Картка 3: Барселона -->
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://images.unsplash.com/photo-1583422874117-1a003bb92731?auto=format&fit=crop&w=500&q=80" alt="Барселона">
+                        </div>
+                        <div class="card-content">
+                            <h3>Барселона, Іспанія</h3>
+                            <p>Сонце, море та неймовірні шедеври архітектури Гауді.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CITY TOURS -->
+        <section id="tours" class="section-padding bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Міські тури</h2>
+                    <p>Продумані маршрути для вихідних або повноцінної відпустки</p>
+                </div>
+                <div class="grid grid-2">
+                    <div class="tour-banner">
+                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=600&q=80" alt="Тур класичною Європою">
+                        <div class="tour-banner-info">
+                            <h3>Класичний вікенд у Празі</h3>
+                            <p>3 дні / 2 ночі • від 150€</p>
+                        </div>
+                    </div>
+                    <div class="tour-banner">
+                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80" alt="Тур до Лондона">
+                        <div class="tour-banner-info">
+                            <h3>Магія величного Лондона</h3>
+                            <p>5 днів / 4 ночі • від 290€</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. WHY CHOOSE TOURS -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Чому обирають нас</h2>
+                    <p>Ми дбаємо про кожну деталь вашої ідеальної мандрівки</p>
+                </div>
+                <div class="grid grid-3 text-center">
+                    <div class="feature-box">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Великий вибір</h3>
+                        <p>Понад 50 унікальних маршрутів по всій Європі під будь-який бюджет.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Надійність та безпека</h3>
+                        <p>Цілодобова підтримка клієнтів та повне страхування кожної подорожі.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">💎</div>
+                        <h3>Найкращі ціни</h3>
+                        <p>Прямі партнерства з готелями гарантують відсутність прихованих комісій.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. TRAVEL ARTICLES -->
+        <section id="articles" class="section-padding bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Блог мандрівника</h2>
+                    <p>Корисні поради, лайфхаки та натхнення для майбутніх поїздок</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=500&q=80" alt="Поради у подорож">
+                        </div>
+                        <div class="card-content">
+                            <span class="date">01 Червня, 2026</span>
+                            <h3><a href="#">Що взяти з собою в євротур?</a></h3>
+                            <p>Чек-лист речей, які зроблять вашу поїздку комфортною та легкою.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=500&q=80" alt="Бюджетні подорожі">
+                        </div>
+                        <div class="card-content">
+                            <span class="date">28 Травня, 2026</span>
+                            <h3><a href="#">Топ-5 бюджетних міст Європи</a></h3>
+                            <p>Куди поїхати за яскравими емоціями без шкоди для гаманця.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=500&q=80" alt="Гастротур">
+                        </div>
+                        <div class="card-content">
+                            <span class="date">15 Травня, 2026</span>
+                            <h3><a href="#">Гастрономічний гід по Італії</a></h3>
+                            <p>Справжня італійська піца, паста та джелато: де шукати автентичні смаки.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 7. FOOTER (НИЖНЯ ШАПКА / ПІДВАЛ) -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <div class="logo">
+                    <a href="#">Euro<span>Tour</span></a>
+                </div>
+                <p>Ваш надійний провідник у світі незабутніх європейських подорожей.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Швидкі посилання</h4>
+                <ul>
+                    <li><a href="#home">Головна</a></li>
+                    <li><a href="#destinations">Напрямки</a></li>
+                    <li><a href="#tours">Міські тури</a></li>
+                </ul>
+            </div>
+            <div class="footer-contacts">
+                <h4>Контакти</h4>
+                <p>📍 м. Київ, вул. Університетська</p>
+                <p>📞 +380 (44) 123-45-67</p>
+                <p>📧 info@eurotour.com</p>
+            </div>
         </div>
-    </div>
-
-    <div class="search-item">
-        <span class="circle"></span>
-        <div>
-            <p class="label">When</p>
-            <p class="value">February 05 ~ March 14</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EuroTour. Всі права захищені | Проєкт виконано: Марія</p>
         </div>
-    </div>
-
-    <div class="search-item">
-        <span class="circle"></span>
-        <div>
-            <p class="label">Tour Type</p>
-            <p class="value">All tour</p>
-        </div>
-    </div>
-
-    <div class="search-btn"></div>
-</div>
-
-    <div class="hero-content">
-        <h1>Find Next Place To Visit</h1>
-        <p>
-            Discover amazing places at exclusive deals.<br>
-            Eat, Shop, Visit interesting places around the world.
-        </p>
-    </div>
-
-   <div class="wave-container">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
-        <path fill="#ffffff" d="M0,50 C240,100 480,0 720,50 C960,100 1200,0 1440,50 L1440,100 L0,100 Z"></path>
-    </svg>
-   </div>
-</header>
-
-   <section class="destinations">
-    <div class="container">
-        <h2>Popular Destinations</h2>
-
-        <div class="cards" id="destinations-container"></div>
-    </div>
-</section>
-
-<script type="module" src="main.js"></script>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
